@@ -21,7 +21,13 @@
   align-items: center;
   width: 100vw;
   height: 7rem;
-  background-color: lightblue;
+  background: rgb(249, 249, 255);
+  background: linear-gradient(
+    270deg,
+    rgba(249, 249, 255, 1) 0%,
+    rgba(241, 241, 249, 1) 43%,
+    rgba(0, 254, 255, 1) 100%
+  );
 }
 
 .navbar a {
@@ -31,8 +37,27 @@
 
 .navbar_logo img {
   position: relative;
-  top: 3rem;
-  width: 15rem;
+  top: 1rem;
+  width: 10rem;
+  left: -6rem;
+}
+#logo {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
 }
 .navbar a:hover {
   color: orange;
@@ -42,15 +67,15 @@
 }
 
 /* ============================= MAIN SECTION ============================= */
-main h1 {
+/* main h1 {
   font-size: 10rem;
   text-align: center;
   margin-top: 2rem;
   font-style: italic;
-  font-family: sans-serif;
-}
+    font-family: sans-serif;
+} */
 .main {
-  background-color: beige;
+  background-color: lightblue;
 }
 .container {
   margin-top: 5rem;
@@ -93,9 +118,11 @@ main h1 {
   grid-area: 2 / 3 / 3 / 4;
   font-size: 3rem;
 }
+.div5 img{
+  width: 66rem;
+}
 
 .container_footer {
-  background-color: lightblue;
   margin-top: 5rem;
   width: 100%;
   display: flex;
@@ -104,14 +131,21 @@ main h1 {
   align-items: center;
   align-content: center;
   bottom: 0;
+  background: rgb(249, 249, 255);
+  background: linear-gradient(
+    270deg,
+    rgba(249, 249, 255, 1) 0%,
+    rgba(241, 241, 249, 1) 43%,
+    rgba(0, 254, 255, 1) 100%
+  );
 }
 
 .container_footer img {
   width: 5rem;
 }
-.texto-formulario{
-    font-size: 2rem;
-    text-align: center;
+.texto-formulario {
+  font-size: 2rem;
+  text-align: center;
 }
 .formulario {
   display: flex;
@@ -120,40 +154,53 @@ main h1 {
   justify-content: center;
   font-size: 2.5rem;
 }
-.formulario input{
-    font-size: 2.5rem;
+.formulario input {
+  font-size: 2.5rem;
 }
-.formulario label{
-    font-size: 2.5rem;
+.formulario label {
+  font-size: 2.5rem;
 }
-.formulario textarea{
-    font-size: 2.5rem;
+.formulario textarea {
+  font-size: 2.5rem;
 }
 .formulario p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
-.quienes-somos{
-    background-color: lightblue;
-    display: inline-block;
-    border: solid orange;
-    width: 70rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 5rem;
-    padding: 5rem;
+.quienes-somos {
+  display: flex;
 
-
-
-
-
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.quienes-somos p {
+  text-align: center;
+}
+.ancho {
+  width: 70rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 5rem;
+  padding: 5rem;
+  background-color: lightblue;
+  border: solid orange;
 }
 @media only screen and (max-width: 600px) {
   main h1 {
     font-size: 5rem;
     margin-top: 10rem;
     margin-bottom: 0;
+  }
+  .main{
+    background-image: url(../assets/img/gulf-fondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
   }
 
   .navbar {
@@ -172,7 +219,7 @@ main h1 {
     position: relative;
     top: 0;
     width: 15rem;
-}
+  }
   .container {
     margin-top: 5rem;
     display: flex;
@@ -188,63 +235,62 @@ main h1 {
   .container_footer {
     height: 20rem;
   }
-  .texto-formulario{
+  .texto-formulario {
     font-size: 2rem;
     text-align: center;
-}
-.formulario {
+  }
+  .formulario {
     display: flex;
     flex-direction: row;
     align-items: center;
     font-size: 2.5rem;
     justify-content: space-between;
-
-  
-}
-.formulario input{
+  }
+  .formulario input {
     font-size: 2.5rem;
-}
-.formulario label{
+  }
+  .formulario label {
     font-size: 2.5rem;
-}
-.formulario textarea{
+  }
+  .formulario textarea {
     font-size: 2.5rem;
-}
-.formulario p {
+  }
+  .formulario p {
     font-size: 1.5rem;
+  }
 }
-}
-
 
 @media only screen and (max-width: 768px) {
-    .texto-formulario{
-        font-size: 2rem;
-        text-align: center;
-    }
-    .formulario {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-size: 2.5rem;
-        justify-content: space-between;
+  .texto-formulario {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .formulario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2.5rem;
+    justify-content: space-between;
+  }
+  .formulario input {
+    font-size: 2.5rem;
+  }
+  .formulario label {
+    font-size: 2.5rem;
+  }
+  .formulario textarea {
+    font-size: 2.5rem;
+  }
+  .formulario p {
+    font-size: 1.5rem;
+  }
+  .main{
+    background-image: url(../assets/img/gulf-fondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     
-      
-    }
-    .formulario input{
-        font-size: 2.5rem;
-    }
-    .formulario label{
-        font-size: 2.5rem;
-    }
-    .formulario textarea{
-        font-size: 2.5rem;
-    }
-    .formulario p {
-        font-size: 1.5rem;
-    }
-
-
-
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -252,5 +298,12 @@ main h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .main{
+    background-image: url(../assets/img/gulf-fondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
   }
 }
